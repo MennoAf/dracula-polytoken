@@ -23,10 +23,11 @@ Download using the [GitHub `.zip` download](https://github.com/dracula/polytoken
 
    If you set a custom `XDG_CONFIG_HOME`, use `$XDG_CONFIG_HOME/polytoken/themes/` instead.
 
-2. Set the theme in your Polytoken config file:
+2. Set the theme in your Polytoken config (`~/.config/polytoken/config.yaml`):
 
-   ```toml
-   tui.theme-file = "dracula"
+   ```yaml
+   tui:
+     theme-file: dracula
    ```
 
    Or preview it for the current session by running `/theme dracula` inside Polytoken.
