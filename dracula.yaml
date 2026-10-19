@@ -1,0 +1,729 @@
+version: 1
+title: Dracula / Alucard
+# dark: faithful Dracula. light: official Alucard (Dracula's light
+# counterpart). Palettes per draculatheme.com/contribute#color-palette
+# and draculatheme.com/spec.
+palette:
+  dark:
+    text:
+      body:
+        rgb: "#F8F8F2"
+      muted:
+        rgb: "#6272A4"
+      dim:
+        $ref: "#/palette/dark/text/muted"
+      inverse:
+        rgb: "#F8F8F2"
+    surface:
+      app:
+        rgb: "#282A36"
+      floating:
+        rgb: "#21222C"
+      card:
+        rgb: "#343746"
+      system_reminder:
+        $ref: "#/palette/dark/surface/app"
+      status_bar:
+        rgb: "#21222C"
+      focus_ring:
+        rgb: "#44475A"
+      selection:
+        rgb: "#44475A"
+      command_mode:
+        rgb: "#3D2B33"
+      command_mode_bright:
+        rgb: "#4A2F35"
+      slash_mode:
+        rgb: "#2F3149"
+      slash_mode_fg:
+        rgb: "#8BE9FD"
+    semantic:
+      error:
+        rgb: "#FF5555"
+      warning:
+        rgb: "#FFB86C"
+      success:
+        rgb: "#50FA7B"
+      info:
+        rgb: "#8BE9FD"
+    chrome:
+      accent:
+        rgb: "#BD93F9"
+      border:
+        rgb: "#44475A"
+      expansion_indicator:
+        $ref: "#/palette/dark/text/inverse"
+      detail_bar:
+        rgb: "#6272A4"
+      facet:
+        rgb: "#FFB86C"
+      ask_user_question:
+        rgb: "#FF79C6"
+      subagent:
+        rgb: "#8BE9FD"
+      goal:
+        rgb: "#BD93F9"
+    reference:
+      resolved:
+        $ref: "#/palette/dark/semantic/success"
+      unresolved:
+        $ref: "#/palette/dark/semantic/error"
+    model_family:
+      claude:
+        rgb: "#FFB86C"
+      openai:
+        rgb: "#50FA7B"
+      gemini:
+        rgb: "#8BE9FD"
+      kimi:
+        rgb: "#BD93F9"
+      ollama:
+        rgb: "#F8F8F2"
+      glm:
+        rgb: "#FF79C6"
+      deepseek:
+        rgb: "#8BE9FD"
+      mimo:
+        $ref: "#/palette/dark/model_family/claude"
+      minimax:
+        rgb: "#F1FA8C"
+      nvidia:
+        rgb: "#50FA7B"
+      unknown:
+        rgb: "#6272A4"
+    diff:
+      added:
+        $ref: "#/palette/dark/semantic/success"
+      removed:
+        $ref: "#/palette/dark/semantic/error"
+      context:
+        rgb: "#B7BFCE"
+      hunk_header:
+        $ref: "#/palette/dark/semantic/info"
+    syntax:
+      keyword:
+        rgb: "#FF79C6"
+      string:
+        rgb: "#F1FA8C"
+      comment:
+        rgb: "#6272A4"
+      literal:
+        rgb: "#FFB86C"
+      type:
+        rgb: "#8BE9FD"
+      function:
+        rgb: "#50FA7B"
+      operator:
+        rgb: "#F8F8F2"
+      number:
+        rgb: "#BD93F9"
+      punctuation:
+        rgb: "#F8F8F2"
+    status_bar:
+      model:
+        $ref: "#/palette/dark/text/body"
+      facet:
+        $ref: "#/palette/dark/semantic/info"
+      monitor:
+        rgb: "#50FA7B"
+      monitor_bypass_plus:
+        $ref: "#/palette/dark/syntax/type"
+      label:
+        $ref: "#/palette/dark/text/inverse"
+      dirty:
+        rgb: "#F1FA8C"
+    sidebar:
+      pane_state_indicator:
+        $ref: "#/palette/dark/text/inverse"
+    inline:
+      link:
+        $ref: "#/palette/dark/semantic/info"
+      code:
+        rgb: "#FF79C6"
+    animation:
+      completion_flash:
+        rgb: "#264A33"
+      error_pulse:
+        rgb: "#4F2428"
+    emphasis:
+      muted:
+        $ref: "#/palette/dark/text/muted"
+  light:
+    # Official Alucard palette (draculatheme.com/contribute#color-palette):
+    # Background #FFFBEB, Selection #CFCFDE, Foreground #1F1F1F, Comment
+    # #6C664B, Red #CB3A2A, Orange #A34D14, Yellow #846E15, Green #14710A,
+    # Cyan #036A96, Purple #644AC9, Pink #A3144D. Surface ladder from the
+    # spec's context shades; #E2DECA is the spec's line-highlight value.
+    text:
+      body:
+        rgb: "#1F1F1F"
+      muted:
+        rgb: "#6C664B"
+      dim:
+        $ref: "#/palette/light/text/muted"
+      inverse:
+        rgb: "#FFFBEB"
+    surface:
+      app:
+        $ref: "#/palette/light/text/inverse"
+      floating:
+        rgb: "#EFEDDC"
+      card:
+        rgb: "#ECE9DF"
+      system_reminder:
+        $ref: "#/palette/light/surface/card"
+      status_bar:
+        rgb: "#DEDCCF"
+      focus_ring:
+        rgb: "#E2DECA"
+      selection:
+        rgb: "#CFCFDE"
+      command_mode:
+        rgb: "#F5E4DE"
+      command_mode_bright:
+        rgb: "#EED3CC"
+      slash_mode:
+        rgb: "#E9E6F6"
+      slash_mode_fg:
+        rgb: "#036A96"
+    semantic:
+      error:
+        rgb: "#CB3A2A"
+      warning:
+        rgb: "#A34D14"
+      success:
+        rgb: "#14710A"
+      info:
+        rgb: "#036A96"
+    chrome:
+      accent:
+        rgb: "#644AC9"
+      border:
+        rgb: "#CECCC0"
+      expansion_indicator:
+        $ref: "#/palette/light/text/inverse"
+      detail_bar:
+        rgb: "#BCBAB3"
+      facet:
+        rgb: "#A34D14"
+      ask_user_question:
+        rgb: "#A3144D"
+      subagent:
+        rgb: "#036A96"
+      goal:
+        rgb: "#644AC9"
+    reference:
+      resolved:
+        $ref: "#/palette/light/semantic/success"
+      unresolved:
+        $ref: "#/palette/light/semantic/error"
+    model_family:
+      claude:
+        rgb: "#A34D14"
+      openai:
+        rgb: "#14710A"
+      gemini:
+        rgb: "#036A96"
+      kimi:
+        rgb: "#644AC9"
+      ollama:
+        rgb: "#1F1F1F"
+      glm:
+        rgb: "#A3144D"
+      deepseek:
+        rgb: "#036A96"
+      mimo:
+        $ref: "#/palette/light/model_family/claude"
+      minimax:
+        rgb: "#846E15"
+      nvidia:
+        rgb: "#198D0C"
+      unknown:
+        $ref: "#/palette/light/text/muted"
+    diff:
+      added:
+        $ref: "#/palette/light/semantic/success"
+      removed:
+        $ref: "#/palette/light/semantic/error"
+      context:
+        $ref: "#/palette/light/text/muted"
+      hunk_header:
+        $ref: "#/palette/light/semantic/info"
+    syntax:
+      keyword:
+        rgb: "#A3144D"
+      string:
+        rgb: "#846E15"
+      comment:
+        rgb: "#6C664B"
+      literal:
+        rgb: "#A34D14"
+      type:
+        rgb: "#036A96"
+      function:
+        rgb: "#14710A"
+      operator:
+        rgb: "#1F1F1F"
+      number:
+        rgb: "#644AC9"
+      punctuation:
+        rgb: "#1F1F1F"
+    status_bar:
+      model:
+        $ref: "#/palette/light/text/body"
+      facet:
+        $ref: "#/palette/light/diff/hunk_header"
+      monitor:
+        $ref: "#/palette/light/semantic/success"
+      monitor_bypass_plus:
+        rgb: "#047FB4"
+      label:
+        $ref: "#/palette/light/text/body"
+      dirty:
+        rgb: "#A34D14"
+    sidebar:
+      pane_state_indicator:
+        $ref: "#/palette/light/text/body"
+    inline:
+      link:
+        rgb: "#036A96"
+      code:
+        rgb: "#A3144D"
+    animation:
+      completion_flash:
+        rgb: "#DFEDD8"
+      error_pulse:
+        rgb: "#F3DDD9"
+    emphasis:
+      muted:
+        $ref: "#/palette/light/text/muted"
+dark:
+  error:
+    fg:
+      $ref: "#/palette/dark/semantic/error"
+  warning:
+    fg:
+      $ref: "#/palette/dark/semantic/warning"
+  success:
+    fg:
+      $ref: "#/palette/dark/semantic/success"
+  info:
+    fg:
+      $ref: "#/palette/dark/semantic/info"
+  dim:
+    fg:
+      $ref: "#/palette/dark/text/dim"
+  accent:
+    fg:
+      $ref: "#/palette/dark/chrome/accent"
+    b: true
+  body:
+    fg:
+      $ref: "#/palette/dark/text/body"
+  muted:
+    fg:
+      $ref: "#/palette/dark/text/muted"
+  border:
+    fg:
+      $ref: "#/palette/dark/chrome/border"
+  focus_ring:
+    bg:
+      $ref: "#/palette/dark/surface/focus_ring"
+  app_background:
+    bg:
+      $ref: "#/palette/dark/surface/app"
+  floating_window_background:
+    bg:
+      $ref: "#/palette/dark/surface/floating"
+  expansion_indicator:
+    fg:
+      $ref: "#/palette/dark/chrome/expansion_indicator"
+    b: true
+  tool_detail_bar:
+    fg:
+      $ref: "#/palette/dark/chrome/detail_bar"
+  user_message_background:
+    bg:
+      $ref: "#/palette/dark/surface/card"
+  prompt_reference_resolved:
+    fg:
+      $ref: "#/palette/dark/reference/resolved"
+  prompt_reference_unresolved:
+    fg:
+      $ref: "#/palette/dark/reference/unresolved"
+  system_reminder_background:
+    fg:
+      $ref: "#/palette/dark/text/muted"
+    bg:
+      $ref: "#/palette/dark/surface/system_reminder"
+  assistant_message_background:
+    bg:
+      $ref: "#/palette/dark/surface/card"
+  facet_chrome:
+    fg:
+      $ref: "#/palette/dark/chrome/facet"
+    b: true
+  ask_user_question_chrome:
+    fg:
+      $ref: "#/palette/dark/chrome/ask_user_question"
+    b: true
+  subagent_chrome:
+    fg:
+      $ref: "#/palette/dark/chrome/subagent"
+    b: true
+  family_claude:
+    fg:
+      $ref: "#/palette/dark/model_family/claude"
+  family_openai:
+    fg:
+      $ref: "#/palette/dark/model_family/openai"
+  family_gemini:
+    fg:
+      $ref: "#/palette/dark/model_family/gemini"
+  family_kimi:
+    fg:
+      $ref: "#/palette/dark/model_family/kimi"
+  family_ollama:
+    fg:
+      $ref: "#/palette/dark/model_family/ollama"
+  family_glm:
+    fg:
+      $ref: "#/palette/dark/model_family/glm"
+  family_deepseek:
+    fg:
+      $ref: "#/palette/dark/model_family/deepseek"
+  family_mimo:
+    fg:
+      $ref: "#/palette/dark/model_family/mimo"
+  family_minimax:
+    fg:
+      $ref: "#/palette/dark/model_family/minimax"
+  family_nvidia:
+    fg:
+      $ref: "#/palette/dark/model_family/nvidia"
+  family_unknown:
+    fg:
+      $ref: "#/palette/dark/model_family/unknown"
+  diff_added:
+    fg:
+      $ref: "#/palette/dark/diff/added"
+  diff_removed:
+    fg:
+      $ref: "#/palette/dark/diff/removed"
+  diff_context:
+    fg:
+      $ref: "#/palette/dark/diff/context"
+  diff_hunk_header:
+    fg:
+      $ref: "#/palette/dark/diff/hunk_header"
+    b: true
+  code_keyword:
+    fg:
+      $ref: "#/palette/dark/syntax/keyword"
+  code_string:
+    fg:
+      $ref: "#/palette/dark/syntax/string"
+  code_comment:
+    fg:
+      $ref: "#/palette/dark/syntax/comment"
+    i: true
+  code_literal:
+    fg:
+      $ref: "#/palette/dark/syntax/literal"
+  code_type:
+    fg:
+      $ref: "#/palette/dark/syntax/type"
+  code_function:
+    fg:
+      $ref: "#/palette/dark/syntax/function"
+  code_operator:
+    fg:
+      $ref: "#/palette/dark/syntax/operator"
+  code_number:
+    fg:
+      $ref: "#/palette/dark/syntax/number"
+  code_punctuation:
+    fg:
+      $ref: "#/palette/dark/syntax/punctuation"
+  status_bar_model:
+    fg:
+      $ref: "#/palette/dark/status_bar/model"
+    b: true
+  status_bar_facet:
+    fg:
+      $ref: "#/palette/dark/status_bar/facet"
+    b: true
+  status_bar_monitor:
+    fg:
+      $ref: "#/palette/dark/status_bar/monitor"
+  status_bar_monitor_bypass_plus:
+    fg:
+      $ref: "#/palette/dark/status_bar/monitor_bypass_plus"
+  status_bar_label:
+    fg:
+      $ref: "#/palette/dark/status_bar/label"
+    b: true
+  status_bar_dirty:
+    fg:
+      $ref: "#/palette/dark/status_bar/dirty"
+  status_bar_block:
+    bg:
+      $ref: "#/palette/dark/surface/status_bar"
+  sidebar_pane_state_indicator:
+    fg:
+      $ref: "#/palette/dark/sidebar/pane_state_indicator"
+    b: true
+  link:
+    fg:
+      $ref: "#/palette/dark/inline/link"
+    u: true
+  code_inline:
+    fg:
+      $ref: "#/palette/dark/inline/code"
+  selected:
+    bg:
+      $ref: "#/palette/dark/surface/selection"
+  prompt_selection:
+    bg:
+      $ref: "#/palette/dark/surface/selection"
+  completion_flash:
+    bg:
+      $ref: "#/palette/dark/animation/completion_flash"
+  error_pulse:
+    bg:
+      $ref: "#/palette/dark/animation/error_pulse"
+  goal_accent:
+    fg:
+      $ref: "#/palette/dark/chrome/goal"
+    b: true
+  muted_emphasis:
+    fg:
+      $ref: "#/palette/dark/emphasis/muted"
+    i: true
+  command_mode_background:
+    bg:
+      $ref: "#/palette/dark/surface/command_mode"
+  command_mode_background_bright:
+    bg:
+      $ref: "#/palette/dark/surface/command_mode_bright"
+  slash_mode_background:
+    bg:
+      $ref: "#/palette/dark/surface/slash_mode"
+  slash_mode_foreground:
+    fg:
+      $ref: "#/palette/dark/surface/slash_mode_fg"
+light:
+  error:
+    fg:
+      $ref: "#/palette/light/semantic/error"
+  warning:
+    fg:
+      $ref: "#/palette/light/semantic/warning"
+  success:
+    fg:
+      $ref: "#/palette/light/semantic/success"
+  info:
+    fg:
+      $ref: "#/palette/light/semantic/info"
+  dim:
+    fg:
+      $ref: "#/palette/light/text/dim"
+  accent:
+    fg:
+      $ref: "#/palette/light/chrome/accent"
+    b: true
+  body:
+    fg:
+      $ref: "#/palette/light/text/body"
+  muted:
+    fg:
+      $ref: "#/palette/light/text/muted"
+  border:
+    fg:
+      $ref: "#/palette/light/chrome/border"
+  focus_ring:
+    bg:
+      $ref: "#/palette/light/surface/focus_ring"
+  app_background:
+    bg:
+      $ref: "#/palette/light/surface/app"
+  floating_window_background:
+    bg:
+      $ref: "#/palette/light/surface/floating"
+  expansion_indicator:
+    fg:
+      $ref: "#/palette/light/chrome/expansion_indicator"
+    b: true
+  tool_detail_bar:
+    fg:
+      $ref: "#/palette/light/chrome/detail_bar"
+  user_message_background:
+    bg:
+      $ref: "#/palette/light/surface/card"
+  prompt_reference_resolved:
+    fg:
+      $ref: "#/palette/light/reference/resolved"
+  prompt_reference_unresolved:
+    fg:
+      $ref: "#/palette/light/reference/unresolved"
+  system_reminder_background:
+    fg:
+      $ref: "#/palette/light/text/muted"
+    bg:
+      $ref: "#/palette/light/surface/system_reminder"
+  assistant_message_background:
+    bg:
+      $ref: "#/palette/light/surface/card"
+  facet_chrome:
+    fg:
+      $ref: "#/palette/light/chrome/facet"
+    b: true
+  ask_user_question_chrome:
+    fg:
+      $ref: "#/palette/light/chrome/ask_user_question"
+    b: true
+  subagent_chrome:
+    fg:
+      $ref: "#/palette/light/chrome/subagent"
+    b: true
+  family_claude:
+    fg:
+      $ref: "#/palette/light/model_family/claude"
+  family_openai:
+    fg:
+      $ref: "#/palette/light/model_family/openai"
+  family_gemini:
+    fg:
+      $ref: "#/palette/light/model_family/gemini"
+  family_kimi:
+    fg:
+      $ref: "#/palette/light/model_family/kimi"
+  family_ollama:
+    fg:
+      $ref: "#/palette/light/model_family/ollama"
+  family_glm:
+    fg:
+      $ref: "#/palette/light/model_family/glm"
+  family_deepseek:
+    fg:
+      $ref: "#/palette/light/model_family/deepseek"
+  family_mimo:
+    fg:
+      $ref: "#/palette/light/model_family/mimo"
+  family_minimax:
+    fg:
+      $ref: "#/palette/light/model_family/minimax"
+  family_nvidia:
+    fg:
+      $ref: "#/palette/light/model_family/nvidia"
+  family_unknown:
+    fg:
+      $ref: "#/palette/light/model_family/unknown"
+  diff_added:
+    fg:
+      $ref: "#/palette/light/diff/added"
+  diff_removed:
+    fg:
+      $ref: "#/palette/light/diff/removed"
+  diff_context:
+    fg:
+      $ref: "#/palette/light/diff/context"
+  diff_hunk_header:
+    fg:
+      $ref: "#/palette/light/diff/hunk_header"
+    b: true
+  code_keyword:
+    fg:
+      $ref: "#/palette/light/syntax/keyword"
+  code_string:
+    fg:
+      $ref: "#/palette/light/syntax/string"
+  code_comment:
+    fg:
+      $ref: "#/palette/light/syntax/comment"
+    i: true
+  code_literal:
+    fg:
+      $ref: "#/palette/light/syntax/literal"
+  code_type:
+    fg:
+      $ref: "#/palette/light/syntax/type"
+  code_function:
+    fg:
+      $ref: "#/palette/light/syntax/function"
+  code_operator:
+    fg:
+      $ref: "#/palette/light/syntax/operator"
+  code_number:
+    fg:
+      $ref: "#/palette/light/syntax/number"
+  code_punctuation:
+    fg:
+      $ref: "#/palette/light/syntax/punctuation"
+  status_bar_model:
+    fg:
+      $ref: "#/palette/light/status_bar/model"
+    b: true
+  status_bar_facet:
+    fg:
+      $ref: "#/palette/light/status_bar/facet"
+    b: true
+  status_bar_monitor:
+    fg:
+      $ref: "#/palette/light/status_bar/monitor"
+  status_bar_monitor_bypass_plus:
+    fg:
+      $ref: "#/palette/light/status_bar/monitor_bypass_plus"
+  status_bar_label:
+    fg:
+      $ref: "#/palette/light/status_bar/label"
+    b: true
+  status_bar_dirty:
+    fg:
+      $ref: "#/palette/light/status_bar/dirty"
+  status_bar_block:
+    bg:
+      $ref: "#/palette/light/surface/status_bar"
+  sidebar_pane_state_indicator:
+    fg:
+      $ref: "#/palette/light/sidebar/pane_state_indicator"
+    b: true
+  link:
+    fg:
+      $ref: "#/palette/light/inline/link"
+    u: true
+  code_inline:
+    fg:
+      $ref: "#/palette/light/inline/code"
+  selected:
+    bg:
+      $ref: "#/palette/light/surface/selection"
+  prompt_selection:
+    bg:
+      $ref: "#/palette/light/surface/selection"
+  completion_flash:
+    bg:
+      $ref: "#/palette/light/animation/completion_flash"
+  error_pulse:
+    bg:
+      $ref: "#/palette/light/animation/error_pulse"
+  goal_accent:
+    fg:
+      $ref: "#/palette/light/chrome/goal"
+    b: true
+  muted_emphasis:
+    fg:
+      $ref: "#/palette/light/emphasis/muted"
+    i: true
+  command_mode_background:
+    bg:
+      $ref: "#/palette/light/surface/command_mode"
+  command_mode_background_bright:
+    bg:
+      $ref: "#/palette/light/surface/command_mode_bright"
+  slash_mode_background:
+    bg:
+      $ref: "#/palette/light/surface/slash_mode"
+  slash_mode_foreground:
+    fg:
+      $ref: "#/palette/light/surface/slash_mode_fg"

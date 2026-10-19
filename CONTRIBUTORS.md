@@ -15,7 +15,6 @@ That's why the community is essential for this project to keep evolving. Below a
 - [`README.md`](README.md): Introduction and guide for GitHub users.
 - [`screenshot.png`](screenshot.png) or [`screenshot/`](screenshot/): Preview images displayed on [draculatheme.com](https://draculatheme.com).
 - [`INSTALL.md`](INSTALL.md): Installation instructions to display on the website.
-- [`sample`](/sample/): Code samples in various languages to aid theme creation. (_Consider removing this folder before submission._)
 
 ### Screenshots
 
